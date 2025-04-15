@@ -38,3 +38,7 @@ class GravitySimulator:
                     total_force_y += force_y
             body1['velocity'][0] += (total_force_x / body1['mass']) * time_step
             body1['velocity'][1] += (total_force_y / body1['mass']) * time_step
+    
+    def draw_bodies(self, screen):
+        for body in self.bodies:
+            pygame.draw.circle(screen, (255, 255, 255), (int(body['position'][0]), int(body['position'][1])), 5)
