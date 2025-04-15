@@ -23,7 +23,7 @@ while running:
             running = False
 
     # Update the physics
-    gravity_simulator.update_positions()
+    gravity_simulator.update_positions(1 / FPS)
 
     # Clear the screen
     screen.fill((0, 0, 0))
